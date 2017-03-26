@@ -37,9 +37,9 @@ a {
   a:focus {
     text-decoration: none; }
 
-/*============================
-LOCATIONS
-============================*/
+/*================================================
+====================LOCATIONS====================
+================================================*/
 #locations {
   padding: 11px 0;
   background-color: #000; }
@@ -98,9 +98,9 @@ LOCATIONS
   color: #909090;
   text-transform: uppercase; }
 
-/*============================
-HEADER
-============================*/
+/*================================================
+====================HEADER====================
+================================================*/
 #header {
   background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#292929));
   background: -webkit-linear-gradient(top, #212121, #292929);
@@ -168,31 +168,41 @@ HEADER
   .menu__list_item:focus {
     color: #b5b5b5; }
 
-/*============================
-INVENTORY
-============================*/
+.fa-caret-down {
+  position: relative;
+  top: 30px;
+  right: 53px;
+  color: #00cbff;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s; }
+
+.fa-caret-down-visible {
+  opacity: 1; }
+
+.menu__list_item-hover:hover ~ .fa-caret-down {
+  opacity: 1; }
+
+/*================================================
+====================INVENTORY====================
+================================================*/
 .inventory {
   position: absolute;
   width: 1400px;
-  height: 460px;
+  height: 464px;
   left: 50%;
-  margin-top: 10px;
+  margin-top: 6px;
   margin-left: -700px;
-  padding: 32px 0 0 55px;
   border: 1px solid #00cbff;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: none; }
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 100; }
 
-.inventory__list_item-link {
-  font-family: "arial";
-  font-size: 12px;
-  color: #cdbe95;
-  text-transform: uppercase; }
+.inventory-wrapper {
+  padding-left: 55px; }
 
 .inventory__title {
-  border-bottom: 1px solid #232323;
-  margin-bottom: 27px;
-  padding-bottom: 14px; }
+  padding: 32px 0 27px 55px; }
 
 .inventory__title_item {
   font-family: "BentonSans ExtraCondensed Book";
@@ -200,11 +210,648 @@ INVENTORY
   font-weight: 200;
   color: #cdbe95;
   text-transform: uppercase;
-  letter-spacing: 0.2em; }
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #232323;
+  padding-bottom: 15px; }
 
-/*============================
-SLIDER
-============================*/
+.inventory__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5px;
+  margin-left: -20px; }
+
+.inventory__block_img {
+  width: 90px;
+  height: 37px;
+  text-align: center; }
+
+.inventory__block_text {
+  font-family: "arial";
+  font-size: 12px;
+  color: #cdbe95;
+  text-transform: uppercase;
+  padding-top: 5px; }
+
+.search-bg {
+  height: 66px;
+  padding: 18px 0;
+  background: rgba(33, 32, 30, 0.8); }
+
+.search-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.search-block {
+  margin-right: 14px; }
+
+/*=========================================
+SEARCH SELECT STYLE
+=========================================*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.drop-price {
+  width: 236px;
+  font-family: "arial";
+  font-size: 16px;
+  color: #060604;
+  text-transform: uppercase;
+  position: relative; }
+  .drop-price .option-price {
+    padding: 4px;
+    cursor: pointer;
+    background-color: #fff; }
+    .drop-price .option-price:not(.active-price) {
+      display: none;
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .drop-price.visible-price {
+    width: 236px; }
+    .drop-price.visible-price:before, .drop-price.visible-price:after {
+      border-color: #fff; }
+    .drop-price.visible-price:before {
+      opacity: 0; }
+    .drop-price.visible-price:after {
+      opacity: 1; }
+    .drop-price.visible-price .option-price {
+      color: #060604;
+      display: block; }
+  .drop-price.opacity-price .option-price {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1; }
+    .drop-price.opacity-price .option-price:nth-child(0) {
+      -webkit-transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s, -webkit-transform 0.5s 0s; }
+    .drop-price.opacity-price .option-price:nth-child(1) {
+      -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s; }
+    .drop-price.opacity-price .option-price:nth-child(2) {
+      -webkit-transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s; }
+    .drop-price.opacity-price .option-price:nth-child(3) {
+      -webkit-transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s; }
+    .drop-price.opacity-price .option-price:nth-child(4) {
+      -webkit-transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+    .drop-price.opacity-price .option-price:nth-child(5) {
+      -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s; }
+    .drop-price.opacity-price .option-price:nth-child(6) {
+      -webkit-transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s, -webkit-transform 0.5s 0.6s; }
+    .drop-price.opacity-price .option-price:nth-child(7) {
+      -webkit-transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s, -webkit-transform 0.5s 0.7s; }
+    .drop-price.opacity-price .option-price:nth-child(8) {
+      -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s, -webkit-transform 0.5s 0.8s; }
+    .drop-price.opacity-price .option-price:nth-child(9) {
+      -webkit-transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s, -webkit-transform 0.5s 0.9s; }
+  .drop-price.withBG-price .option-price {
+    -webkit-transition: color 0.5s !important;
+    transition: color 0.5s !important; }
+    .drop-price.withBG-price .option-price:not(.placeholder-price):hover {
+      color: #00cbff; }
+    .drop-price.withBG-price .option-price:not(.placeholder-price).active-price {
+      color: #00cbff; }
+  .drop-price:after, .drop-price:before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.2em solid #060604;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .drop-price:before {
+    border-left: none;
+    border-top: none;
+    top: 0.5em; }
+  .drop-price:after {
+    border-right: none;
+    border-bottom: none;
+    opacity: 0; }
+
+.mini-hack-price {
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.drop-year {
+  width: 236px;
+  font-family: "arial";
+  font-size: 16px;
+  color: #060604;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s; }
+  .drop-year .option-year {
+    padding: 4px;
+    cursor: pointer;
+    background-color: #fff; }
+    .drop-year .option-year:not(.active-year) {
+      display: none;
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .drop-year.visible-year {
+    width: 236px; }
+    .drop-year.visible-year:before, .drop-year.visible-year:after {
+      border-color: #fff; }
+    .drop-year.visible-year:before {
+      opacity: 0; }
+    .drop-year.visible-year:after {
+      opacity: 1; }
+    .drop-year.visible-year .option-year {
+      color: #060604;
+      display: block; }
+  .drop-year.opacity-year .option-year {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1; }
+    .drop-year.opacity-year .option-year:nth-child(0) {
+      -webkit-transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s, -webkit-transform 0.5s 0s; }
+    .drop-year.opacity-year .option-year:nth-child(1) {
+      -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s; }
+    .drop-year.opacity-year .option-year:nth-child(2) {
+      -webkit-transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s; }
+    .drop-year.opacity-year .option-year:nth-child(3) {
+      -webkit-transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s; }
+    .drop-year.opacity-year .option-year:nth-child(4) {
+      -webkit-transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+    .drop-year.opacity-year .option-year:nth-child(5) {
+      -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s; }
+    .drop-year.opacity-year .option-year:nth-child(6) {
+      -webkit-transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s, -webkit-transform 0.5s 0.6s; }
+    .drop-year.opacity-year .option-year:nth-child(7) {
+      -webkit-transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s, -webkit-transform 0.5s 0.7s; }
+    .drop-year.opacity-year .option-year:nth-child(8) {
+      -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s, -webkit-transform 0.5s 0.8s; }
+    .drop-year.opacity-year .option-year:nth-child(9) {
+      -webkit-transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s, -webkit-transform 0.5s 0.9s; }
+  .drop-year.withBG-year .option-year {
+    -webkit-transition: color 0.5s !important;
+    transition: color 0.5s !important; }
+    .drop-year.withBG-year .option-year:not(.placeholder-year):hover {
+      color: #00cbff; }
+    .drop-year.withBG-year .option-year:not(.placeholder-year).active-year {
+      color: #00cbff; }
+  .drop-year:after, .drop-year:before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.2em solid #060604;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .drop-year:before {
+    border-left: none;
+    border-top: none;
+    top: 0.5em; }
+  .drop-year:after {
+    border-right: none;
+    border-bottom: none;
+    opacity: 0; }
+
+.mini-hack-year {
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.drop-make {
+  width: 236px;
+  font-family: "arial";
+  font-size: 16px;
+  color: #060604;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s; }
+  .drop-make .option-make {
+    padding: 4px;
+    cursor: pointer;
+    background-color: #fff; }
+    .drop-make .option-make:not(.active-make) {
+      display: none;
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .drop-make.visible-make {
+    width: 236px; }
+    .drop-make.visible-make:before, .drop-make.visible-make:after {
+      border-color: #fff; }
+    .drop-make.visible-make:before {
+      opacity: 0; }
+    .drop-make.visible-make:after {
+      opacity: 1; }
+    .drop-make.visible-make .option-make {
+      color: #060604;
+      display: block; }
+  .drop-make.opacity-make .option-make {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1; }
+    .drop-make.opacity-make .option-make:nth-child(0) {
+      -webkit-transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s, -webkit-transform 0.5s 0s; }
+    .drop-make.opacity-make .option-make:nth-child(1) {
+      -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s; }
+    .drop-make.opacity-make .option-make:nth-child(2) {
+      -webkit-transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s; }
+    .drop-make.opacity-make .option-make:nth-child(3) {
+      -webkit-transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s; }
+    .drop-make.opacity-make .option-make:nth-child(4) {
+      -webkit-transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+    .drop-make.opacity-make .option-make:nth-child(5) {
+      -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s; }
+    .drop-make.opacity-make .option-make:nth-child(6) {
+      -webkit-transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s, -webkit-transform 0.5s 0.6s; }
+    .drop-make.opacity-make .option-make:nth-child(7) {
+      -webkit-transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s, -webkit-transform 0.5s 0.7s; }
+    .drop-make.opacity-make .option-make:nth-child(8) {
+      -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s, -webkit-transform 0.5s 0.8s; }
+    .drop-make.opacity-make .option-make:nth-child(9) {
+      -webkit-transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s, -webkit-transform 0.5s 0.9s; }
+  .drop-make.withBG-make .option-make {
+    -webkit-transition: color 0.5s !important;
+    transition: color 0.5s !important; }
+    .drop-make.withBG-make .option-make:not(.placeholder-make):hover {
+      color: #00cbff; }
+    .drop-make.withBG-make .option-make:not(.placeholder-make).active-make {
+      color: #00cbff; }
+  .drop-make:after, .drop-make:before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.2em solid #060604;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .drop-make:before {
+    border-left: none;
+    border-top: none;
+    top: 0.5em; }
+  .drop-make:after {
+    border-right: none;
+    border-bottom: none;
+    opacity: 0; }
+
+.mini-hack-make {
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.drop-model {
+  width: 236px;
+  font-family: "arial";
+  font-size: 16px;
+  color: #060604;
+  text-transform: uppercase;
+  position: relative;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s; }
+  .drop-model .option-model {
+    padding: 4px;
+    cursor: pointer;
+    background-color: #fff; }
+    .drop-model .option-model:not(.active-model) {
+      display: none;
+      opacity: 0;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
+  .drop-model.visible-model {
+    width: 236px; }
+    .drop-model.visible-model:before, .drop-model.visible-model:after {
+      border-color: #fff; }
+    .drop-model.visible-model:before {
+      opacity: 0; }
+    .drop-model.visible-model:after {
+      opacity: 1; }
+    .drop-model.visible-model .option-model {
+      color: #060604;
+      display: block; }
+  .drop-model.opacity-model .option-model {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1; }
+    .drop-model.opacity-model .option-model:nth-child(0) {
+      -webkit-transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, -webkit-transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s;
+      transition: opacity 0.5s 0s, transform 0.5s 0s, -webkit-transform 0.5s 0s; }
+    .drop-model.opacity-model .option-model:nth-child(1) {
+      -webkit-transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, -webkit-transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s;
+      transition: opacity 0.5s 0.1s, transform 0.5s 0.1s, -webkit-transform 0.5s 0.1s; }
+    .drop-model.opacity-model .option-model:nth-child(2) {
+      -webkit-transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, -webkit-transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s;
+      transition: opacity 0.5s 0.2s, transform 0.5s 0.2s, -webkit-transform 0.5s 0.2s; }
+    .drop-model.opacity-model .option-model:nth-child(3) {
+      -webkit-transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, -webkit-transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s;
+      transition: opacity 0.5s 0.3s, transform 0.5s 0.3s, -webkit-transform 0.5s 0.3s; }
+    .drop-model.opacity-model .option-model:nth-child(4) {
+      -webkit-transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, -webkit-transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s;
+      transition: opacity 0.5s 0.4s, transform 0.5s 0.4s, -webkit-transform 0.5s 0.4s; }
+    .drop-model.opacity-model .option-model:nth-child(5) {
+      -webkit-transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s;
+      transition: opacity 0.5s 0.5s, transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s; }
+    .drop-model.opacity-model .option-model:nth-child(6) {
+      -webkit-transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, -webkit-transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s;
+      transition: opacity 0.5s 0.6s, transform 0.5s 0.6s, -webkit-transform 0.5s 0.6s; }
+    .drop-model.opacity-model .option-model:nth-child(7) {
+      -webkit-transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, -webkit-transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s;
+      transition: opacity 0.5s 0.7s, transform 0.5s 0.7s, -webkit-transform 0.5s 0.7s; }
+    .drop-model.opacity-model .option-model:nth-child(8) {
+      -webkit-transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s;
+      transition: opacity 0.5s 0.8s, transform 0.5s 0.8s, -webkit-transform 0.5s 0.8s; }
+    .drop-model.opacity-model .option-model:nth-child(9) {
+      -webkit-transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, -webkit-transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s;
+      transition: opacity 0.5s 0.9s, transform 0.5s 0.9s, -webkit-transform 0.5s 0.9s; }
+  .drop-model.withBG-model .option-model {
+    -webkit-transition: color 0.5s !important;
+    transition: color 0.5s !important; }
+    .drop-model.withBG-model .option-model:not(.placeholder-model):hover {
+      color: #00cbff; }
+    .drop-model.withBG-model .option-model:not(.placeholder-model).active-model {
+      color: #00cbff; }
+  .drop-model:after, .drop-model:before {
+    content: "";
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.2em solid #060604;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+  .drop-model:before {
+    border-left: none;
+    border-top: none;
+    top: 0.5em; }
+  .drop-model:after {
+    border-right: none;
+    border-bottom: none;
+    opacity: 0; }
+
+.mini-hack-model {
+  opacity: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+/*===============================================
+THE END SEARCH SELECT STYLE
+===============================================*/
+.search-button {
+  font-family: "BentonSans ExtraCondensed Book";
+  font-size: 18px;
+  color: #cdbd95;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: color 1s;
+  transition: color 1s; }
+  .search-button:hover {
+    color: #00cbff; }
+
+/*================================================
+====================SLIDER====================
+================================================*/
+#slider {
+  height: 476px;
+  background-color: #000; }
+
+/*================================================
+====================CHOISE CAR====================
+================================================*/
+#sortingMenu {
+  background-color: #232323; }
+
+.sortingMenu__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.sortingMenu__wrapper_half {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.sortingMenu__block {
+  width: 160px;
+  padding: 26px 0 38px 0;
+  text-align: center;
+  cursor: pointer; }
+  .sortingMenu__block:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#232323), to(#2a2a2a));
+    background: -webkit-linear-gradient(top, #232323, #2a2a2a);
+    background: linear-gradient(to bottom, #232323, #2a2a2a); }
+  .sortingMenu__block:hover .sortingMenu__block_name {
+    color: #00cbff !important;
+    border: 1px solid #00cbff !important;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 203, 255, 0.75);
+            box-shadow: 0px 0px 8px 0px rgba(0, 203, 255, 0.75);
+    margin-top: -2px; }
+
+.sortingMenu__block_name {
+  font-family: "BentonSans ExtraCondensed Book";
+  font-size: 15px;
+  color: #cdbd95;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 38px;
+  padding: 3px 12px;
+  display: inline-block; }
+  .sortingMenu__block_name h4 {
+    font-weight: 200; }
+
+/*================================================
+====================RESULT====================
+================================================*/
+#result {
+  height: 760px;
+  background: transparent url("../img/bg_road.jpg") left top no-repeat; }
+
+.result__block {
+  height: 430px;
+  border: 1px solid #fff; }
+
+/*================================================
+====================MEDIA====================
+================================================*/
+@media only screen and (max-width: 1400px) {
+  .inventory {
+    width: 100%;
+    margin: 0;
+    left: 0; } }
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px; } }
