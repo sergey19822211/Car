@@ -29,7 +29,8 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'working/libs/jquery/dist/jquery.min.js' // Берем jQuery
+        'working/libs/jquery/dist/jquery.min.js', // Берем jQuery
+        'working/libs/slick-carousel/slick/slick.js' // Берем Slick slider
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

@@ -14,32 +14,26 @@ LOCATIONS
 ================================== -->
 <section id = "locations">
 	<div class="container">
-		<div class="row">
-			<div class="locations-inner">
-				<div class="col-md-10">
-					<div class="locations">
-						<h5 class="locations__title">locations:</h5>
-						<ul class="locations__contacts">
-							<li class = "locations__contacts_item"><img src="img/marker.png" alt="">                             &nbsp; 7405 S Harlem Ave Bridgeview, IL 60455</li>
-							<li class = "locations__contacts_item locations__contacts_item-two"><img src="img/phone.png" alt=""> &nbsp;  708-594-0000</li>
-							<li class = "locations__contacts_item"><img src="img/marker.png" alt="">                             &nbsp;  7300 S Harlem Ave Bridgeview, IL 60455</li>
-							<li class = "locations__contacts_item"><img src="img/phone.png" alt="">                              &nbsp;  708-594-9999</li>
-						</ul>
-					</div>
-				</div>
 
-				<div class="col-md-2">
-					<div class="garage">
-						<div class="garage__img">
-							<img src="img/my_garage.png" alt="">
-						</div>
-						<div class="garage__data">
-							<span class = "garage__data_item">my garage</span> <span class = "garage__data_number">(10)</span>
-						</div>
-					</div>
-				</div>
+		<div class="locations">
+			<h5 class="locations__title">locations:</h5>
+			<ul class="locations-contacts">
+				<li class = "locations-contacts__item"><img src="img/marker.png" alt="">                             &nbsp; 7405 S Harlem Ave Bridgeview, IL 60455</li>
+				<li class = "locations-contacts__item locations-contacts__item_two"><img src="img/phone.png" alt=""> &nbsp;  708-594-0000</li>
+				<li class = "locations-contacts__item"><img src="img/marker.png" alt="">                             &nbsp;  7300 S Harlem Ave Bridgeview, IL 60455</li>
+				<li class = "locations-contacts__item"><img src="img/phone.png" alt="">                              &nbsp;  708-594-9999</li>
+			</ul>
+		</div>
+				
+		<div class="garage">
+			<div class="garage__img">
+				<img src="img/my_garage.png" alt="">
+			</div>
+			<div class="garage__data">
+				<span class = "garage__data_item">my garage</span> <span class = "garage__data_number">(10)</span>
 			</div>
 		</div>
+
 	</div>
 </section>
 <!--==================================
@@ -47,34 +41,33 @@ HEADER
 ================================== -->
 <section id="header">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="header__logo">
-					<img src="img/logo.png" alt="">
-				</div>
+		
+		<div class="header-logo">
+			<img src="img/logo.png" alt="">
+		</div>
+
+		<div class="navigation">
+
+			<div class="social">
+				<ul class="social-list">
+					<li><a href="#" class = "social-list__item"><i class="fa fa-facebook"  aria-hidden="liue"></i></a></li>
+					<li><a href="#" class = "social-list__item"><i class="fa fa-twitter"   aria-hidden="liue"></i></a></li>
+					<li><a href="#" class = "social-list__item"><i class="fa fa-youtube"   aria-hidden="liue"></i></a></li>
+					<li><a href="#" class = "social-list__item"><i class="fa fa-instagram" aria-hidden="liue"></i></a></li>
+				</ul>
 			</div>
-			<div class="col-md-8">
-				<div class="navigation">
-					<div class="social">
-						<ul class="social__list">
-							<li><a href="#" class = "social__list_item"><i class="fa fa-facebook"  aria-hidden="liue"></i></a></li>
-							<li><a href="#" class = "social__list_item"><i class="fa fa-twitter"   aria-hidden="liue"></i></a></li>
-							<li><a href="#" class = "social__list_item"><i class="fa fa-youtube"   aria-hidden="liue"></i></a></li>
-							<li><a href="#" class = "social__list_item"><i class="fa fa-instagram" aria-hidden="liue"></i></a></li>
-						</ul>
-					</div>
-					<div class="menu">
-						<ul class="menu__list">
-							<li><a href="#" class = "menu__list_item menu__list_item-close">     home</a></li>
-							<li class = "menu__list_item-hover"><a href="#" class = "menu__list_item" id = "js-click-inventory"> inventory</a></li><i class="fa fa-caret-down" aria-hidden="true"></i>
-							<li><a href="#" class = "menu__list_item menu__list_item-close">     get approved</a></li>
-							<li><a href="#" class = "menu__list_item menu__list_item-close">     our team</a></li>
-							<li><a href="#" class = "menu__list_item menu__list_item-close">     find us</a></li>
-							<li><a href="#" class = "menu__list_item menu__list_item-close">     contact us</a></li>
-						</ul>
-					</div>
-				</div>
+
+			<div class="menu">
+				<ul class="menu-list">
+					<li><a href="#" class = "menu-list__item menu-list__item_close">     home</a></li>
+					<li class = "menu-list__item_hover"><a href="#" class = "menu-list__item" id = "js-click-inventory"> inventory</a></li><i class="fa fa-caret-down" aria-hidden="true"></i>
+					<li><a href="#" class = "menu-list__item menu-list__item_close">     get approved</a></li>
+					<li><a href="#" class = "menu-list__item menu-list__item_close">     our team</a></li>
+					<li><a href="#" class = "menu-list__item menu-list__item_close">     find us</a></li>
+					<li><a href="#" class = "menu-list__item menu-list__item_close">     contact us</a></li>
+				</ul>
 			</div>
+
 		</div>
 	</div>
 </section>	
@@ -91,321 +84,309 @@ HEADER
 			</div>
 		</div>
 		<div class="row inventory-wrapper">
-			<div class="col-md-3">
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+			<div class="col-md-3 col-sm-6">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/accura.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>acura</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>acura</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/bmv.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>audi</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>audi</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/bmv.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>bmw</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>bmw</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/bourketsbike.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>bourgets bike works</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>bourgets bike works</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/cadillac.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>cadillac</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>cadillac</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/chevrole.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>chevrolet</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>chevrolet</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/chrysler.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>chrysler</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>chrysler</span> (<span>10</span>)</a>
 					</div>
 				</div>
+
 			</div>
 			<!-- ============================================= -->
-			<div class="col-md-3">
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+			<div class="col-md-3 col-sm-6">
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/dodge.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>dodge</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>dodge</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/ford.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>ford</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>ford</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/harley.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>harley-davidson</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>harley-davidson</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/honda.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>honda</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>honda</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/honda.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>hynday</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>hynday</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/infinity.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>infiniti</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>infiniti</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/jeep.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>jeep</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>jeep</span> (<span>10</span>)</a>
 					</div>
 				</div>
+
 			</div>
 			<!-- =========================================== -->
-			<div class="col-md-3">
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+			<div class="col-md-3 col-sm-6">
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/kia.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>kia</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>kia</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/leksus.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>lexus</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>lexus</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/lincoln.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>lincoln</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>lincoln</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/mazda.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>mazda</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>mazda</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/mersedes.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>mercedes-benz</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>mercedes-benz</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/mini.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>mini</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>mini</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/mitsubishi.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>mitsubishi</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>mitsubishi</span> (<span>10</span>)</a>
 					</div>
 				</div>
+
 			</div>
 			<!-- =========================================== -->
-			<div class="col-md-3">
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+			<div class="col-md-3 col-sm-6">
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/nissan.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>nissan</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>nissan</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/porshe.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>porsche</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>porsche</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/smart.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>smart</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>smart</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/scion.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>scion</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>scion</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/volkswagen.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>volkswagen</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>volkswagen</span> (<span>10</span>)</a>
 					</div>
 				</div>
-				<div class="inventory__block">
-					<div class="inventory__block_img">
+
+				<div class="inventory-block">
+					<div class="inventory-block__img">
 						<img src="img/volvo.png" alt="">
 					</div>
-					<div class="inventory__block_text">
-						<span>volvo</span> (<span>10</span>)
+					<div class="inventory-block__text">
+						<a href="#"><span>volvo</span> (<span>10</span>)</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 
 		<div class="row search-bg">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="row search-wrapper">
-
-					<div class="drop-price search-block">
-						<div class="option-price active-price placeholder-price" data-value="placeholder">
-						price
-						</div>
-						<div class="option-price" data-value="wow">
-						Wow!
-						</div>
-						<div class="option-price" data-value="drop">
-						So dropdown!
-						</div>
-						<div class="option-price" data-value="select">
-						Very select!
-						</div>
-						<div class="option-price" data-value="custom">
-						Much custom!
-						</div>
-						<div class="option-price" data-value="animation"> 
-						Such animation!
-						</div>
+					
+					<div class="select-price">
+					    <input type="hidden" name="item" value="1">
+					    <div class="selected-price">price</div>
+					    <div class="option-list-price">
+					        <div class="option-price" data-select-val="0">All cuisines</div>
+					        <div class="option-price" data-select-val="1">Arabian</div>
+					        <div class="option-price" data-select-val="2">Asian</div>
+					        <div class="option-price" data-select-val="3">Bagels</div>
+					    </div>
 					</div>
 
-					<div class="drop-year search-block">
-						<div class="option-year active-year placeholder-year" data-value="placeholder">
-						year
-						</div>
-						<div class="option-year" data-value="wow">
-						Wow!
-						</div>
-						<div class="option-year" data-value="drop">
-						So dropdown!
-						</div>
-						<div class="option-year" data-value="select">
-						Very select!
-						</div>
-						<div class="option-year" data-value="custom">
-						Much custom!
-						</div>
-						<div class="option-year" data-value="animation"> 
-						Such animation!
-						</div>
+					<div class="select-year">
+					    <input type="hidden" name="item" value="1">
+					    <div class="selected-year">year</div>
+					    <div class="option-list-year">
+					        <div class="option-year" data-select-val="0">All cuisines</div>
+					        <div class="option-year" data-select-val="1">Arabian</div>
+					        <div class="option-year" data-select-val="2">Asian</div>
+					        <div class="option-year" data-select-val="3">Bagels</div>
+					    </div>
 					</div>
 
-					<div class="drop-make search-block">
-						<div class="option-make active-make placeholder-make" data-value="placeholder">
-						make
-						</div>
-						<div class="option-make" data-value="wow">
-						Wow!
-						</div>
-						<div class="option-make" data-value="drop">
-						So dropdown!
-						</div>
-						<div class="option-make" data-value="select">
-						Very select!
-						</div>
-						<div class="option-make" data-value="custom">
-						Much custom!
-						</div>
-						<div class="option-make" data-value="animation"> 
-						Such animation!
-						</div>
+					<div class="select-makes">
+					    <input type="hidden" name="item" value="1">
+					    <div class="selected-makes">makes</div>
+					    <div class="option-list-makes">
+					        <div class="option-makes" data-select-val="0">All cuisines</div>
+					        <div class="option-makes" data-select-val="1">Arabian</div>
+					        <div class="option-makes" data-select-val="2">Asian</div>
+					        <div class="option-makes" data-select-val="3">Bagels</div>
+					    </div>
 					</div>
 
-					<div class="drop-model search-block">
-						<div class="option-model active-model placeholder-model" data-value="placeholder">
-						model
-						</div>
-						<div class="option-model" data-value="wow">
-						Wow!
-						</div>
-						<div class="option-model" data-value="drop">
-						So dropdown!
-						</div>
-						<div class="option-model" data-value="select">
-						Very select!
-						</div>
-						<div class="option-model" data-value="custom">
-						Much custom!
-						</div>
-						<div class="option-model" data-value="animation"> 
-						Such animation!
-						</div>
+					<div class="select-model">
+					    <input type="hidden" name="item" value="1">
+					    <div class="selected-model">model</div>
+					    <div class="option-list-model">
+					        <div class="option-model" data-select-val="0">All cuisines</div>
+					        <div class="option-model" data-select-val="1">Arabian</div>
+					        <div class="option-model" data-select-val="2">Asian</div>
+					        <div class="option-model" data-select-val="3">Bagels</div>
+					    </div>
 					</div>
 
 					<div class="search-button-block">
@@ -424,112 +405,168 @@ HEADER
 ====================================SLIDER====================================
 ============================================================================ -->
 <section id="slider">
-	
+
+	<div class="slide-wrapper">
+		<div class="slide slide1">
+			<div class="slide-title">
+				<h1 class = "slide-title__regular">let us find what you're</h1>
+				<h1 class = "slide-title__bold">looking for</h1>
+			</div>
+			<a href = "#" class="slide-button">
+				browse inventory
+			</a>
+		</div>
+
+		<div class="slide slide2">
+			<div class="slide-title">
+				<h1 class = "slide-title__regular">let us find what you're</h1>
+				<h1 class = "slide-title__bold">looking for</h1>
+			</div>
+			<a href = "#" class="slide-button">
+				browse inventory
+			</a>
+		</div>
+
+		<div class="slide slide3">
+			<div class="slide-title">
+				<h1 class = "slide-title__regular">let us find what you're</h1>
+				<h1 class = "slide-title__bold">looking for</h1>
+			</div>
+			<a href = "#" class="slide-button">
+				browse inventory
+			</a>
+		</div>
+	</div>	
+
+	<ul class="pagination">
+		<li class = "pagination__item">slide 01</li>
+		<li class = "pagination__item">slide 02</li>
+		<li class = "pagination__item">slide 03</li>
+	</ul>
+
 </section>
 
 <!--============================================================================
 ====================================CHOISE CAR====================================
 ============================================================================ -->
 
-<section id="sortingMenu">
+<section id="sorting">
 	<div class="container">
-		<div class="row">
-			<div class="sortingMenu__wrapper">
-				<div class="sortingMenu__wrapper_half">
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>convertible</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/convertible.png" alt="">
-						</div>
-					</div>
+		<div class="sorting-wrapper">	
 
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>coupe</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/coupe.png" alt="">
-						</div>
+			<div class="sorting-block-wrapper">
+				<a href="">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>convertible</h4>
 					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>hatchback</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/hatchback.png" alt="">
-						</div>
+					<div class="sorting-block__img">
+						<img src="img/convertible.png" alt="">
 					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>sedan</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/sedan.png" alt="">
-						</div>
-					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>suv</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/suv.png" alt="">
-						</div>
-					</div>		
 				</div>
+				</a>
+			</div>
 
-				<div class="sortingMenu__wrapper_half">
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>truck</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/track.png" alt="">
-						</div>
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>coupe</h4>
 					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>van-minivan</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/minivan.png" alt="">
-						</div>
-					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>wagon</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/wagon.png" alt="">
-						</div>
-					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>hybrid</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/hibryd.png" alt="">
-						</div>
-					</div>
-
-					<div class="sortingMenu__block">
-						<div class="sortingMenu__block_name">
-							<h4>electric</h4>
-						</div>
-						<div class="sortingMenu__block_img">
-							<img src="img/electric.png" alt="">
-						</div>
+					<div class="sorting-block__img">
+						<img src="img/coupe.png" alt="">
 					</div>
 				</div>
 			</div>
-		</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>hatchback</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/hatchback.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>sedan</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/sedan.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>suv</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/suv.png" alt="">
+					</div>
+				</div>	
+			</div>	
+
+			<div class="sorting-block-wrapper">		
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>truck</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/track.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>van-minivan</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/minivan.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>wagon</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/wagon.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>hybrid</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/hibryd.png" alt="">
+					</div>
+				</div>
+			</div>
+
+	        <div class="sorting-block-wrapper">
+				<div class="sorting-block">
+					<div class="sorting-block__name">
+						<h4>electric</h4>
+					</div>
+					<div class="sorting-block__img">
+						<img src="img/electric.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>	
 	</div>
 </section>
 

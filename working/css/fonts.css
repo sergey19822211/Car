@@ -16,3 +16,9 @@
   src: url("../fonts/BentonSans ExtraCondensed Book.ttf") format("truetype");
   font-style: normal;
   font-weight: normal; }
+
+@font-face {
+  font-family: "BentonSans-CondensedBlack";
+  src: url("../fonts/BentonSans-CondensedBlack.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal; }
