@@ -650,7 +650,11 @@ THE END SEARCH SELECT STYLE
   margin-top: 23px;
   letter-spacing: 3px; }
   .info-block-contact__link a, .info-block-finance-link a, .info-block-reviews__link a {
-    color: #cdbd95; }
+    color: #cdbd95;
+    -webkit-transition: color 1s;
+    transition: color 1s; }
+    .info-block-contact__link a:hover, .info-block-finance-link a:hover, .info-block-reviews__link a:hover {
+      color: #00cbff; }
 
 .info-block-finance {
   position: relative;
@@ -706,25 +710,46 @@ THE END SEARCH SELECT STYLE
 ====================FOOTER====================
 ================================================*/
 #footer {
-  background-color: #232323; }
+  background-color: #232323;
+  padding: 20px 0; }
 
-.footer-menu-list__item {
+.footer-menu-list__item, .powered {
   font-family: "BentonSans ExtraCondensed Regular";
   font-size: 12px;
   color: #797979;
   text-transform: uppercase;
   -webkit-transition: color 1s;
   transition: color 1s; }
-  .footer-menu-list__item:hover {
+  .footer-menu-list__item:hover, .powered:hover {
     color: #00cbff; }
 
 .footer-menu-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
-  .footer-menu-list li:first-child:hover {
+  display: flex;
+  margin-bottom: 10px; }
+  .footer-menu-list li {
+    border-right: 1px solid #797979;
+    line-height: 10px;
+    padding: 0 5px; }
+    .footer-menu-list li:first-child:hover {
+      color: #797979; }
+    .footer-menu-list li:first-child {
+      color: #797979;
+      margin-top: 1px;
+      border: none; }
+    .footer-menu-list li:last-child {
+      border: none; }
+
+.powered {
+  margin: 0 5px; }
+  .powered:hover {
     color: #797979; }
+
+.footer-social {
+  float: right;
+  margin-top: -10px; }
 
 /*================================================
 ====================MEDIA====================

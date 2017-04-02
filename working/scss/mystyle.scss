@@ -694,7 +694,12 @@ THE END SEARCH SELECT STYLE
   letter-spacing: 3px;
   a{
     color: #cdbd95;
+    transition: color 1s;
+    &:hover{
+      color: #00cbff;
+    }
   }
+
 }
 
 .info-block-finance{
@@ -760,6 +765,7 @@ THE END SEARCH SELECT STYLE
 ================================================*/
 #footer{
   background-color: #232323;
+  padding: 20px 0;
 }
 
 .footer-menu-list__item{
@@ -775,11 +781,36 @@ THE END SEARCH SELECT STYLE
 
 .footer-menu-list{
   display: flex;
+  margin-bottom: 10px;
   li {
+    border-right: 1px solid #797979;
+    line-height: 10px;
+    padding: 0 5px;
     &:first-child:hover{
       color: #797979;
     }
+    &:first-child{
+      color: #797979;
+      margin-top: 1px;
+      border: none;
+    }
+    &:last-child{
+      border: none;
+    }
   }
+}
+
+.powered{
+  @extend .footer-menu-list__item;
+  margin: 0 5px;
+  &:hover{
+    color: #797979;
+  }
+}
+
+.footer-social{
+  float: right;
+  margin-top: -10px;
 }
 /*================================================
 ====================MEDIA====================
