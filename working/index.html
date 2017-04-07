@@ -69,8 +69,41 @@ HEADER
 			</div>
 
 		</div>
+
+		<!-- MOBILE MENU (display block - 767px) -->
+		<div class="mobile-menu">
+			<div class="mobile-menu-link">
+				<a href=""><img src="img/marker.png" alt="" class = "mobile-menu-link__img"></a>
+				<a href=""><img src="img/phone.png" alt="" class = "mobile-menu-link__img"></a>
+			</div>
+			<div class="mobile-menu-button">
+				menu
+			</div>
+		</div>
+		<!-- THE END MOBILE MENU (display block - 767px)-->
+
 	</div>
-</section>	
+</section>
+<!-- =================POPUP MENU (display block - 767px)================= -->
+<div id="popup-menu">
+	<div id="popup-menu-close"></div>
+	<ul class = "popup-list">
+		<li><a href="#" class = "popup-list__item">home</a></li>
+		<li><a href="#" class = "popup-list__item" id = "js-second-popup-list-button">inventory</a>
+			<ul class="second-popup-list">
+				<li><a href="#" class = "second-popup-list__item">finance center</a></li>
+				<li><a href="#" class = "second-popup-list__item">finance application</a></li>
+				<li><a href="#" class = "second-popup-list__item">get trade in ooffer</a></li>
+			</ul>
+		</li>
+		<li><a href="#" class = "popup-list__item">get approved</a></li>
+		<li><a href="#" class = "popup-list__item">find us</a></li>
+		<li><a href="#" class = "popup-list__item">contact us</a></li>
+	</ul>
+</div>
+
+<!-- THE END POPUP MENU (display block - 767px) -->
+	
 <!--============================================================================
 ====================================INVENTORY====================================
 ============================================================================ -->
@@ -407,6 +440,7 @@ HEADER
 <section id="slider">
 
 	<div class="slide-wrapper">
+
 		<div class="slide slide1">
 			<div class="slide-title">
 				<h1 class = "regular">let us find what you're</h1>
@@ -436,6 +470,7 @@ HEADER
 				browse inventory
 			</a>
 		</div>
+
 	</div>	
 
 	<ul class="pagination">
@@ -443,6 +478,12 @@ HEADER
 		<li class = "pagination__item">slide 02</li>
 		<li class = "pagination__item">slide 03</li>
 	</ul>
+
+	<div class="mobile-pagination">
+		<span class = "mobile-pagination__item"></span>
+		<span class = "mobile-pagination__item"></span>
+		<span class = "mobile-pagination__item"></span>
+	</div>
 
 </section>
 
@@ -574,31 +615,52 @@ HEADER
 ====================================RESULT====================================
 ============================================================================ -->
 <section id="result">
+<!-- =================================
+SORTING MOBILE (display block - 692px)
+================================= -->
+<div class="mob-sorting">
+	<a href="" class = "mob-sorting__item">convertable</a>
+	<a href="" class = "mob-sorting__item">electric</a>
+	<a href="" class = "mob-sorting__item">hybrid</a>
+	<a href="" class = "mob-sorting__item">suv</a>
+	<a href="" class = "mob-sorting__item">van minivan</a>
+	<a href="" class = "mob-sorting__item">coupe</a>
+	<a href="" class = "mob-sorting__item">hatchback</a>
+	<a href="" class = "mob-sorting__item">sedan</a>
+	<a href="" class = "mob-sorting__item">truck</a>
+	<a href="" class = "mob-sorting__item">wagon</a>
+</div>
+
+<!-- =================================
+THE END SORTING MOBILE (display block - 692px)
+================================= -->
 	<div class="container no-padding">
-		<div class = "result-wrapper">
-			
-			<div class="result-block">
-				<div class="result-block-img">
-					<a href="#"><img src="img/car_block1.png" alt=""></a>
-					<i class="fa fa-search-plus" aria-hidden="true"></i>
-				</div>
-				<div class="result-block-text">
-					<h4 class = "result__name">2016 porsche 911 turbo coupe</h4>
-					<h4 class = "result__price">Price: <span>$205,987</span></h4>
-					<p class =  "result__mileage">Mileage: &nbsp;&nbsp;<span>4,200</span></p>
-					<p class = "result__stock">Stock#:  &nbsp;&nbsp;&nbsp;<span>8326276</span></p> 
-				</div>
-				<div class="result-details">
-					<a href = "#" class = "result__details_text">details <img src="img/arrow_right.png" alt=""></a> 
-					<div class="result-detail-links">
-						<a href="" class = "result-detail-links__item"><img src="img/detail1.png" alt=""></a>
-						<a href="" class = "result-detail-links__item"><img src="img/detail2.png" alt=""></a>
-						<a href="" class = "result-detail-links__item"><img src="img/detail3.png" alt=""></a>
-						<a href="" class = "result-detail-links__item"><img src="img/detail4.png" alt=""></a>
+		<div class = "row result-wrapper">
+
+			<div class="result-block-wrapper">
+				<div class="result-block">
+					<div class="result-block-img">
+						<a href="#"><img src="img/car_block1.png" alt=""></a>
+						<i class="fa fa-search-plus" aria-hidden="true"></i>
+					</div>
+					<div class="result-block-text">
+						<h4 class = "result__name">2016 porsche 911 turbo coupe</h4>
+						<h4 class = "result__price">Price: <span>$205,987</span></h4>
+						<p class =  "result__mileage">Mileage: &nbsp;&nbsp;<span>4,200</span></p>
+						<p class = "result__stock">Stock#:  &nbsp;&nbsp;&nbsp;<span>8326276</span></p> 
+					</div>
+					<div class="result-details">
+						<a href = "#" class = "result__details_text">details <img src="img/arrow_right.png" alt=""></a> 
+						<div class="result-detail-links">
+							<a href="" class = "result-detail-links__item"><img src="img/detail1.png" alt=""></a>
+							<a href="" class = "result-detail-links__item"><img src="img/detail2.png" alt=""></a>
+							<a href="" class = "result-detail-links__item"><img src="img/detail3.png" alt=""></a>
+							<a href="" class = "result-detail-links__item"><img src="img/detail4.png" alt=""></a>
+						</div>
 					</div>
 				</div>
 			</div>
-		
+			<div class="result-block-wrapper">
 			<div class="result-block">
 				<div class="result-block-img">
 					<a href=""><img src="img/car_block2.png" alt=""></a>
@@ -620,7 +682,8 @@ HEADER
 					</div>
 				</div>
 			</div>
-		
+			</div>
+			<div class="result-block-wrapper">
 			<div class="result-block">
 				<div class="result-block-img">
 					<a href=""><img src="img/car_block3.png" alt=""></a>
@@ -642,7 +705,8 @@ HEADER
 					</div>
 				</div>
 			</div>
-
+			</div>
+			<div class="result-block-wrapper">
 			<div class="result-block">
 				<div class="result-block-img">
 					<a href=""><img src="img/car_block1.png" alt=""></a>
@@ -664,7 +728,7 @@ HEADER
 					</div>
 				</div>
 			</div>
-			
+			</div>
 		</div>
 	</div>
 

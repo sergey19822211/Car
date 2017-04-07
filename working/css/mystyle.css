@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0; }
 
@@ -115,6 +116,7 @@ a {
 ====================HEADER====================
 ================================================*/
 #header {
+  position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#212121), to(#292929));
   background: -webkit-linear-gradient(top, #212121, #292929);
   background: linear-gradient(to bottom, #212121, #292929);
@@ -201,6 +203,63 @@ a {
 
 .menu-list__item_hover:hover ~ .fa-caret-down {
   opacity: 1; }
+
+.mobile-menu {
+  display: none;
+  float: right; }
+
+.mobile-menu-link {
+  margin-top: 17px; }
+
+.mobile-menu-link__img {
+  margin-right: 10px; }
+
+.mobile-menu-button {
+  padding: 21px 16px;
+  margin-right: -9px;
+  font-family: "BentonSans ExtraCondensed Regular";
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer; }
+
+#popup-menu {
+  position: absolute;
+  top: 63px;
+  right: -80%;
+  width: 70%;
+  z-index: 100; }
+
+#popup-menu-close {
+  position: absolute;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: #00cbff;
+  cursor: pointer; }
+
+.popup-list__item, .second-popup-list__item {
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  color: #fff;
+  border-bottom: 1px solid #353535;
+  -webkit-transition: color 1s;
+  transition: color 1s; }
+  .popup-list__item:hover, .second-popup-list__item:hover {
+    color: #00cbff; }
+
+.popup-list {
+  background-color: #000; }
+  .popup-list li {
+    padding: 0 20px; }
+
+.second-popup-list {
+  display: none; }
+
+.second-popup-list__item_active {
+  color: #00cbff !important; }
 
 /*================================================
 ====================INVENTORY====================
@@ -340,6 +399,7 @@ THE END SEARCH SELECT STYLE
 ====================SLIDER====================
 ================================================*/
 #slider {
+  position: relative;
   height: 476px; }
 
 .slide {
@@ -432,6 +492,23 @@ THE END SEARCH SELECT STYLE
   .slide-button:focus {
     color: #fff; }
 
+.mobile-pagination {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -45px; }
+
+.mobile-pagination__item {
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+  cursor: pointer; }
+
 /*================================================
 ====================CHOISE CAR====================
 ================================================*/
@@ -446,7 +523,6 @@ THE END SEARCH SELECT STYLE
 
 .sorting-block-wrapper {
   width: 10%;
-  height: 175px;
   cursor: pointer;
   -webkit-transition: background 1s;
   transition: background 1s; }
@@ -456,18 +532,18 @@ THE END SEARCH SELECT STYLE
     background: linear-gradient(to bottom, #232323, #2a2a2a); }
   .sorting-block-wrapper:hover .sorting-block {
     padding: 25px 0 37px 0; }
-  .sorting-block-wrapper:hover .sorting-block__name {
+  .sorting-block-wrapper:hover .sorting-block__name, .sorting-block-wrapper:hover .mob-sorting__item {
     border: 1px solid #00cbff !important;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 203, 255, 0.75);
             box-shadow: 0px 0px 8px 0px rgba(0, 203, 255, 0.75); }
-  .sorting-block-wrapper:hover .sorting-block__name h4 {
+  .sorting-block-wrapper:hover .sorting-block__name h4, .sorting-block-wrapper:hover .mob-sorting__item h4 {
     color: #00cbff !important; }
 
 .sorting-block {
   padding: 26px 0 38px 0;
   text-align: center; }
 
-.sorting-block__name {
+.sorting-block__name, .mob-sorting__item {
   font-family: "BentonSans ExtraCondensed Book";
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -475,7 +551,7 @@ THE END SEARCH SELECT STYLE
   display: inline-block;
   -webkit-transition: all 1s;
   transition: all 1s; }
-  .sorting-block__name h4 {
+  .sorting-block__name h4, .mob-sorting__item h4 {
     color: #cdbd95;
     font-weight: 200;
     font-size: 15px;
@@ -491,36 +567,49 @@ THE END SEARCH SELECT STYLE
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 50px;
   margin-top: 38px; }
   .sorting-block__img img {
     max-width: 100%;
-    max-height: 100%; }
+    max-height: 50px;
+    display: inline-block;
+    vertical-align: middle; }
+
+.mob-sorting {
+  display: none;
+  max-width: 360px !important;
+  margin: 0 auto; }
+
+.mob-sorting__item {
+  width: 48%;
+  color: #cdbd95;
+  background-color: #232323;
+  text-align: center;
+  margin: 2px 1px 1px 1px;
+  padding: 5px 12px; }
+  .mob-sorting__item:hover {
+    color: #00cbff; }
 
 /*================================================
 ====================RESULT====================
 ================================================*/
 #result {
-  height: 760px;
   background: transparent url("../img/bg_road.jpg") left top no-repeat;
   background-size: cover; }
 
 .result-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 30px 0; }
 
+.result-block-wrapper {
+  height: 100%;
+  margin: 0 5px; }
+
 .result-block {
-  width: 381px;
+  padding: 1px 0 0 0;
   background-color: #484848; }
 
 .no-padding {
@@ -539,7 +628,6 @@ THE END SEARCH SELECT STYLE
 .result-block-img {
   position: relative;
   width: 100%;
-  height: 250px;
   margin: 15px auto 10px;
   padding: 0 15px; }
   .result-block-img img {
@@ -623,12 +711,13 @@ THE END SEARCH SELECT STYLE
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 0 20px; }
 
 .info-block {
   position: relative;
   width: 381px;
-  height: 220px;
+  margin: 0 5px;
   overflow: hidden;
   cursor: pointer; }
 
@@ -767,7 +856,17 @@ THE END SEARCH SELECT STYLE
     display: block; }
   .sorting-block-wrapper {
     float: left;
-    width: 20%; } }
+    width: 20%; }
+  .info-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .info-block {
+    width: 45%; } }
 
 @media only screen and (max-width: 1134px) {
   .menu-list__item {
@@ -784,7 +883,7 @@ THE END SEARCH SELECT STYLE
 
 @media only screen and (max-width: 991px) {
   .menu-list__item {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     padding: 5px; }
   .locations {
@@ -804,3 +903,43 @@ THE END SEARCH SELECT STYLE
   .search-button-block {
     width: 100%;
     text-align: center; } }
+
+@media only screen and (max-width: 692px) {
+  #locations {
+    display: none; }
+  .navigation {
+    display: none; }
+  .mobile-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  #header {
+    height: 63px;
+    padding: 2px 0; }
+  .header-logo {
+    width: 200px; }
+  .pagination {
+    display: none; }
+  .slide-title {
+    margin-left: 10px; }
+  .slide h1 {
+    font-size: 40px; }
+  .slide-button {
+    margin-left: 10px; }
+  .mobile-pagination {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .sorting-wrapper {
+    display: none; }
+  .mob-sorting {
+    max-width: 360px !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }

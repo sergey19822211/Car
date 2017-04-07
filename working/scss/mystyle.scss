@@ -33,6 +33,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 body{
+  overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 }
@@ -136,6 +137,7 @@ a{
 ====================HEADER====================
 ================================================*/
 #header{
+  position: relative;
 	background:linear-gradient(to bottom, #212121, #292929);
 	padding: 5px 0;
   overflow: hidden;
@@ -226,13 +228,89 @@ a{
 		opacity: 1;
 	}
 }
+
+// ==POP UP MOBILE MENU (display block - 692px)=============
+
+.mobile-menu{
+  display: none;
+  float: right;
+}
+
+.mobile-menu-link{
+  margin-top: 17px;
+}
+
+.mobile-menu-link__img{
+  margin-right: 10px;
+}
+
+.mobile-menu-button{
+  padding: 21px 16px;
+  margin-right: -9px;
+  font-family: $BentonSansRegular;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+}
+
+#popup-menu{
+  position: absolute;
+  top: 63px;
+  right: -80%;
+  width: 70%;
+  z-index: 100;
+}
+
+#popup-menu-close{
+  position: absolute;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: #00cbff;
+  cursor: pointer;
+}
+
+.popup-list__item{
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  color: #fff;
+  border-bottom: 1px solid #353535;
+  transition: color 1s;
+  &:hover{
+    color: #00cbff;
+  }
+}
+
+.popup-list{
+  background-color: #000;
+  li{
+    padding: 0 20px;
+  }
+}
+
+.second-popup-list{
+  display: none;
+}
+
+.second-popup-list__item{
+  @extend .popup-list__item;
+}
+
+.second-popup-list__item_active{
+  color: #00cbff !important;
+}
+
+// ===============
+
 /*================================================
 ====================INVENTORY====================
 ================================================*/
 .inventory{
 	position: absolute;
 	width: 1400px;
-	// height: 464px;
 	left: 50%;
 	margin-top: 6px;
 	margin-left: -700px;
@@ -372,6 +450,7 @@ THE END SEARCH SELECT STYLE
 ====================SLIDER====================
 ================================================*/
 #slider{
+  position: relative;
 	height: 476px;
 }
 
@@ -472,6 +551,24 @@ THE END SEARCH SELECT STYLE
   }
 }
 
+.mobile-pagination{
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -45px;
+}
+
+.mobile-pagination__item{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 /*================================================
 ====================CHOISE CAR====================
 ================================================*/
@@ -485,7 +582,6 @@ THE END SEARCH SELECT STYLE
 
 .sorting-block-wrapper{
   width: 10%;
-  height: 175px;
   cursor: pointer;
   transition: background 1s;
   &:hover{
@@ -526,11 +622,35 @@ THE END SEARCH SELECT STYLE
 .sorting-block__img{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  height: 50px;
   margin-top: 38px;
   img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.mob-sorting{
+  display: none;
+  max-width: 360px !important;
+  margin: 0 auto;
+  
+}
+
+.mob-sorting__item{
+
+  @extend .sorting-block__name;
+  width: 48%;
+  color: #cdbd95;
+  background-color: #232323;
+  text-align: center;
+  margin: 2px 1px 1px 1px;
+  padding: 5px 12px;
+  &:hover{
+    color: #00cbff;
   }
 }
 
@@ -538,19 +658,21 @@ THE END SEARCH SELECT STYLE
 ====================RESULT====================
 ================================================*/
 #result{
-	height: 760px;
 	background: transparent url('../img/bg_road.jpg') left top no-repeat;
   background-size: cover;
 }
 
 .result-wrapper{
-  display: flex;
-  justify-content: space-between;
   padding: 30px 0;
 }
 
+.result-block-wrapper{
+  height: 100%;
+  margin: 0 5px;
+}
+
 .result-block{
-  width: 381px;
+  padding: 1px 0 0 0;
   background-color: #484848;
 }
 
@@ -571,7 +693,6 @@ THE END SEARCH SELECT STYLE
 .result-block-img{
   position: relative;
   width: 100%;
-  height: 250px;
   margin: 15px auto 10px;
   padding: 0 15px;
   img{
@@ -664,12 +785,13 @@ THE END SEARCH SELECT STYLE
 .info-wrapper{
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .info-block{
   position: relative;
   width: 381px;
-  height: 220px;
+  margin: 0 5px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -836,6 +958,13 @@ THE END SEARCH SELECT STYLE
     float: left;
     width: 20%;
   }
+  .info-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .info-block{
+    width: 45%;
+  }
   
 }
 
@@ -860,7 +989,7 @@ THE END SEARCH SELECT STYLE
 
 @media only screen and (max-width : 991px) {
   .menu-list__item{
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
     padding: 5px;
   }
@@ -882,29 +1011,48 @@ THE END SEARCH SELECT STYLE
   }
 }
 
-
-// @media (min-width: 1200px) {
-// .container {
-//     width: 1170px;
-// }
-// }
-// @media (min-width: 1300px) {
-// .container {
-//     width: 1240px;
-// }
-// }
-// @media (min-width: 1400px) {
-// .container {
-//     width: 1340px;
-// }
-// }
-// @media (min-width: 1500px) {
-// .container {
-//     width: 1440px;
-// }
-// }
-// @media (min-width: 1720px) {
-// .container {
-//     width: 1600px;
-// }
-// }
+@media only screen and (max-width : 692px) {
+  #locations{
+    display: none;
+  }
+  .navigation{
+    display: none;
+  }
+  .mobile-menu{
+    display: flex;
+  }
+  #header{
+    height: 63px;
+    padding: 2px 0;
+  }
+  .header-logo{
+    width: 200px;
+  }
+  // ==========================
+  .pagination{
+    display: none;
+  }
+  .slide-title{
+    margin-left: 10px;
+  }
+  .slide{
+    h1{
+      font-size: 40px;
+    }
+  }
+  .slide-button{
+    margin-left: 10px;
+  }
+  .mobile-pagination{
+    display: flex;
+  }
+  // =======================
+  .sorting-wrapper{
+    display: none;
+  }
+  .mob-sorting{
+    max-width: 360px !important;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

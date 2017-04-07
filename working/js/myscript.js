@@ -100,16 +100,20 @@ $(function(){
 });
 
 /*======================================================================
-SLICK SLIDER
+SLICK SLIDER SLIDER SECTION
 ======================================================================*/
 
 var slick = $('.slide-wrapper').slick({
   arrows: false,
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 3000
 });
 
 $('.pagination__item').click(function() {
+  $('.slide-wrapper').slick('slickGoTo', $(this).index());
+});
+
+$('.mobile-pagination__item').click(function() {
   $('.slide-wrapper').slick('slickGoTo', $(this).index());
 });
 
@@ -127,3 +131,65 @@ $(".pagination__item").on("click", function(e) {
 
 });
 
+/*======================================================================
+SLICK SLIDER RESULT SECTION
+======================================================================*/
+
+$('.result-wrapper').slick({
+  dots: true,
+  arrows: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1206,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 692,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+/*======================================================================
+MOBILE MENU
+======================================================================*/
+$(".mobile-menu").click(function(){
+  $("#popup-menu").animate({
+    right: "0",
+  }, 500 );
+});
+
+$("#popup-menu-close").click(function(){
+  $("#popup-menu").animate({
+    right: "-80%"
+  }, 500 );
+});
+
+$("#js-second-popup-list-button").on("click", function(e) {
+  e.preventDefault();
+  var $this = $(this);
+  if( !$this.hasClass("second-popup-list__item_active") ) {
+    $(".second-popup-list").slideUp();
+    $("#js-second-popup-list-button").removeClass("second-popup-list__item_active");
+  }
+  $this.toggleClass("second-popup-list__item_active");
+  $this.next().slideToggle();
+});
